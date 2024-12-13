@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANCHARI TRAVELS</title>
+    <!--Bootstrap links-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel = "stylesheet" href="./project.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Maven+Pro:500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        .shh{
+            width:80%;
+            height:300px;
+            border-radius: 30px;
+            cursor: pointer;
+            -webkit-transition: all 400ms ease-in 0s;
+            transition: all 400ms ease-in 0s;
+        }
+        .shh:hover{
+            -webkit-transform: scale3d(1.10, 1.10, 1.10);
+            transform: scale3d(1.10, 1.10, 1.10);
+        }
+        .explore{
+            text-decoration: none;
+            color: white;
+            background-color:blue;
+            padding: 10px 10px 10px 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: larger;
+            border-radius: 10px;
+            cursor: pointer;
+            -webkit-transition: all 400ms ease-in 0s;
+            transition: all 400ms ease-in 0s;
+        }
+        .explore:hover{
+               background-color:burlywood;
+               color:black;
+               font-size: larger;
+               -webkit-transform: scale3d(1.15, 1.15, 1.15);
+            transform: scale3d(1.15, 1.15, 1.15);
+            
+        }
+        .nav-link{
+            font-weight: 200;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            -webkit-transition: all 400ms ease-in 0s;
+            transition: all 400ms ease-in 0s;
+        }
+        .nav-link:hover{
+            color: black;
+            -webkit-transform: scale3d(1.15, 1.15, 1.15);
+            transform: scale3d(1.15, 1.15, 1.15);
+        }
+        #sign{
+            color: white;
+            background-color:blue;
+            padding: 7px 7px 7px 7px;
+            margin: 0%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #sign:hover{
+            color: black;
+            background-color:burlywood;
+        }
+        td{
+            text-align: center;
+            
+        }
+        tr{
+            border-spacing: 30px;
+        }
+        .sil{
+            padding: 7px;
+        }
+        .sil p{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .service-icon{
+            height:50px;
+            width:50px;
+        }
+        .subb{
+   
+                font-weight: 200;
+            font-family: 'Lucfontida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            -webkit-transition: all 400ms ease-in 0s;
+            transition: all 400ms ease-in 0s;
+            }
+        .subb:hover{
+                color: black;
+            -webkit-transform: scale3d(1.15, 1.15, 1.15);
+            transform: scale3d(1.15, 1.15, 1.15);
+            }
+        .bam{
+            width:80%;
+            height:300px;
+        }
+        svg{
+            color: white;
+            background-color:blue;
+            padding: 7px;
+            border-radius: 15px;
+            font-weight: 200;
+            font-family: 'Lucfontida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            -webkit-transition: all 400ms ease-in 0s;
+            transition: all 400ms ease-in 0s;
+        }
+        svg:hover{
+            color: black;
+            background-color:burlywood;
+            -webkit-transform: scale3d(1.15, 1.15, 1.15);
+            transform: scale3d(1.15, 1.15, 1.15);
+        }
+        .container{
+            align-items: center;
+        }
+        .jim{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-decoration:none;
+            font-size: larger;
+            background-color:blue;
+            color:white;
+            padding:10px;
+            border-radius:15px;
+            cursor: pointer;
+            -webkit-transition: all 400ms ease-in 0s;
+            transition: all 400ms ease-in 0s;
+        }
+        .jim:hover{
+            font-size: larger;
+            color: black;
+            background-color:burlywood;
+            -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+        }
+        .card-title{
+            text-align: center;
+        }
+        .card-text{
+            text-align: center;
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .card-img-top{
+            height: 300px;
+            width: 100%;
+        }
+        .card{
+            height:600px;
+            width: 100%;
+        }
+        .card-btn{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            -webkit-transition: all 400ms ease-in 0s;
+            transition: all 400ms ease-in 0s;
+        }
+        .card-btn:hover{
+            font-size: larger;
+            color: black;
+            background-color:burlywood;
+            -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+        }
+        .jun{
+            text-decoration: none;
+            color:black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            -webkit-transition: all 400ms ease-in 0s;
+            transition: all 400ms ease-in 0s;
+        }
+        .jun:hover{
+            font-size: larger;
+            -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+        }
+        
+    </style>
+</head>
+<body>
+    <!--Navbar start-->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <img src="./img/travel-logoo.png" alt="Logo" width="160" height = "80">
+
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./gal.html">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="sign" href="./signup.html">SignUp</a>
+              </li>         
+          </ul>
+        </div>
+      </nav>
+    <!-- Navbar section exit -->
+    <!--Banner Section-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" width="100%">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/burj.jpg " class="d-block w-100" alt="first" width="100%" height="640px">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/taj.jpg" class="d-block w-100" alt="second" width="100%" height="640px">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/front2.jpg" class="d-block w-100" alt="third" width="100%" height="640px">
+          </div>
+        </div>
+      </div>
+
+
+    
+      <!-- Banner section -->
+       <br>
+       <hr>
+       <!--
+       <section class="main">
+    <a class="arrow-wrap" href="#content">
+    <span class="arrow"></span>
+    <span class="hint">scroll</span>
+    </a>-->
+       <br>
+       <center><h1>ABOUT US</h1></center>
+      <!-- About section -->
+    <table>
+        <tr>
+            <td class="sil">
+                <div>
+                    <h3>Welcome to <span style="color: brown;">SANCHARI TRAVELS</span>
+                            the heaven of your holidays.</h3><br>
+                    <p>This travel website aims to inspire wanderlust and facilitate seamless travel planning. It's a platform where
+                        travelers discover destination, find accommodation , and access helpful tips. Ultimately, it's about fostering exploration,
+                        connection adventurers with unique experiences, and simplifying with unique experiences, and simplifying their journey from 
+                        dream to reality.We're your ultimate destination for all things travel-related, offering a seamless platform to explore, plan, 
+                        and book your dream vacations. Whether you're seeking sun-soaked beaches, cultural adventures, or adrenaline-pumping escapades, 
+                        we've got you covered. With user-friendly navigation and expertly crafted itineraries, we strive to make your travel planning 
+                        process effortless and enjoyable. Let us be your trusted companion on the path to unforgettable memories and extraordinary 
+                        adventures. Embark on your next voyage with us, and let the world become your playground.
+                    </p><br>
+                    <a href="about.html" class="explore">Explore</a>
+                </div>
+            </td>
+            <td class="sil">
+                <div>
+                    <img src="./img/an image that symbol.jpg" alt="About Us" height="500px" width="500px">
+                </div>
+            </td>
+        </tr>
+    </table>
+</section>
+    <!-- About section exit -->
+<br>
+<hr>
+
+<br>
+   <!--services section-->
+       <!-- Services section -->
+       <section id="services">
+        <div class="container">
+            <div class="whole">
+                <div>
+                    <center><h1 style="color:brown;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">We Are Here For You</h1></center>
+                    <center><h3 style="text-decoration: underline;">Our Awesome Services</h3></center>
+                </div>
+            </div>
+        </div>
+            <br>
+            <br>
+
+        <table>
+            <tr>
+                <td>
+                    <div>
+                        <img src="./img/spa.jpg" alt="spa" class="shh"><br>
+                        <br>
+                        <br><h3 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Spa, beauty, and health</h3><br>
+                        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><span>Spa, beauty, and health</span>establishments provide rejuvenation and wellness 
+        services aimed at enhancing physical, mental, and emotional well-being. 
+        Spas offer a range of treatments, including massages, facials, and body therapies, 
+        designed to relax muscles, alleviate stress, and promote overall relaxation. Beauty services 
+        focus on enhancing one's appearance through skincare, haircare, and cosmetic treatments, boosting 
+        confidence and self-esteem. Health-focused offerings encompass fitness programs, nutritional 
+        counseling, and holistic therapies to support holistic wellness goals, fostering a balanced lifestyle 
+        and optimal health.</p>
+                    </div>
+                    <div><br>
+                        <a  href="spa.html" style="text-decoration: none;">
+                            <span class="service-icon">
+                                <img src="img/spa.png" alt="spa">
+                            </span><br>
+                            <h5 class="subb">Spa, beauty & Health</h5>
+                        </a>
+                    </div>                  
+                </td>
+
+
+                <td>
+                    <div>
+                        <img src="./img/restaurant.jpg" alt="res" class="shh"><br><br>
+                        <br><h3 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Restaurants</h3><br>
+                        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><span>Restaurants<span>offer diverse culinary experiences, ranging from fine dining to casual eateries,
+         serving a variety of cuisines to satisfy diverse palates and preferences.
+        Restaurants are culinary havens where individuals indulge in a diverse array of flavors, 
+        aromas, and experiences. These establishments offer a welcoming atmosphere for patrons to savor meticulously
+         crafted dishes, ranging from traditional comfort foods to innovative gastronomic creations. Whether it's a 
+         cozy café, a bustling bistro, or an upscale fine dining establishment, restaurants provide a space for 
+         social gatherings, intimate dinners, and culinary adventures. With skilled chefs at the helm,
+          restaurants serve as platforms for culinary creativity, showcasing the artistry and passion of the 
+          culinary world while satisfying appetites and tantalizing taste buds.</p>
+                    </div>
+                    <div><br>
+                        <a  href="res.html" style="text-decoration: none;">
+                            <span class="service-icon">
+                                <img src="img/restaurant.png" alt="res">
+                            </span><br>
+                            <h5 class="subb">Restaurants</h5>
+                            </a>
+                    </div>    
+                </td>
+
+                <td>
+                    <div>
+                        <img src="./img/adventure.jpg" alt="adv" class="shh"><br><br>
+                        <br><h3 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Adventures</h3><br>
+                        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><span>Adventures</span> provide exhilarating and immersive experiences, ranging from outdoor expeditions to 
+        adrenaline-fueled activities, fostering a sense of exploration, discovery, and personal growth.
+        Adventures are exhilarating journeys into the unknown, filled with excitement, discovery, and the 
+        thrill of exploration. Whether embarking on a daring outdoor expedition, diving into a new cultural 
+        experience, or pursuing a personal challenge, adventures ignite the spirit of curiosity and push 
+        boundaries. They offer opportunities to connect with nature, immerse oneself in unfamiliar landscapes, 
+        and embrace the unexpected,adventures inspire a sense of wonder and 
+        leave lasting memories that enrich the tapestry of life.</p>
+                    </div>
+                    <div><br>
+                        <a  href="adv.html" style="text-decoration: none;">
+                            <span class="service-icon">
+                                <img src="img/adventure.png" alt="adv">
+                            </span><br>
+                            <h5 class="subb">Adventures</h5>
+                            </a>
+                    </div>    
+                </td>
+
+            </tr>
+        </table>
+     
+        <br>
+        
+        <hr>
+        <br>
+        <br>
+        <section>
+        <div class="counter">
+            <div class="counter1">
+                <div class="row">
+                    <div class="strip">
+                        <h1>
+                            <span id="count1"></span>+
+                        </h1>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="strip">
+                        <h1>
+                            <span id="count2"></span>+
+                            </h2>
+                            <p>New Friendships</p>
+                    </div>
+                    <div class="strip">
+                        <h1>
+                            <span id="count3"></span>+
+                            </h2>
+                            <p>Five Start Ratings</p>
+                    </div>
+                    <div class="strip">
+                        <h1>
+                            <span id="count4"></span>+
+                            </h2>
+                            <p>Served </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<br>
+<hr>
+<br>
+
+<!-- Team section -->
+<section id="team" class="team_wrapper">
+    <div class="container">
+        <div>
+            <div>
+                <center><h3 style="color:black;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">What can we do for you....?</h3></center>
+                <center><h5 style="color:brown;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;text-decoration:underline">Our Team</h5></center>
+            </div>
+        </div>
+        <br><div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div>
+                    <center><img src="./img/nanduu.jpg" class="img-fluid rounded-3" style="height:405px;border: 1px solid black;" /></center>
+                    <div class="team-info">
+                        <center><h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Nandu</h5></center>
+                        <center><p>Founder</p></center><!--
+                        <ul class="social" style="list-style: none;">
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                              </svg><a href="#"><i class="faang"></i></a></li>
+
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                              </svg><a href="#"><i class="faang"></i></a></li>
+
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                              </svg><a href="#"><i class="faang"></i></a></li>
+
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+</svg><a href="#"><i class="faang"></i></a></li>
+                        </ul>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div>
+                    <center><img src="./img/varsha.jpg" class="img-fluid rounded-3" style="height:405px;border: 1px solid black;"/></center>
+                    <div class="team-info">    
+                        <center><h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Varsha</h5></center>
+                        <center><p>Team Member</p></center><!--
+                        <ul class="social" style="list-style: none;">
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+</svg><a href="#"><i class="faang"></i></a></li>
+
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+</svg><a href="#"><i class="faang"></i></a></li>
+
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                              </svg><a href="#"><i class="faang"></i></a></li>
+
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                              </svg><a href="#"><i class="faang"></i></a></li>
+                        </ul>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div>
+                   <center><img src="./img/veena.jpg" class="img-fluid rounded-3 " style="height:405px;border: 1px solid black;"/></center>
+                    <div class="team-info">
+                        <center><h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Veena</h5></center>
+                        <center><p>Team Member</p></center><!--
+                        <ul class="social" style="list-style: none;">
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                              </svg><a href="#"><i class="faang"></i></a></li>
+
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+</svg><a href="#"><i class="faang"></i></a></li>
+
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                              </svg><a href="#"><i class="faang"></i></a></li>
+
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                              </svg><a href="#"><i class="faang"></i></a></li>
+                        </ul>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div>
+                   <center><img src="./img/vedha.jpg" class="img-fluid rounded-3 " style="height:405px;border: 1px solid black;"/></center>
+                    <div class="team-info">
+                        <center><h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Vedha</h5></center>
+                        <center><p>Team Member</p></center><!--
+                        <ul class="social" style="list-style: none;">
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                              </svg><a href="#"><i class="faang"></i></a></li>
+
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+</svg><a href="#"><i class="faang"></i></a></li>
+
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                              </svg><a href="#"><i class="faang"></i></a></li>
+
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                              </svg><a href="#"><i class="faang"></i></a></li>
+                        </ul>-->
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- Team Section Exit  -->
+<br>
+<hr>
+<br>
+<!-- Gallery section -->
+<section id="gallery" class="gallery_wrapper">
+    <div class="container">
+        <div class="row">
+            <div>
+                <center><h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color:black">Pictures of Happy clients </h4></center>
+                <center><h3 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color:brown;text-decoration:underline;">Our Gallery</h3></center><br>
+                <br>
+            </div>
+        </div>
+        <div>
+            <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size:larger">Explore the world through the captivating narratives and expert travel tips of our blog, offering inspiration and guidance for your next adventure based on admin's personal experiances.</p><br>
+        </div>
+
+        
+ <table style="align-items:center;">
+ <tr>
+    <td>
+        <div class="card" style="width: 26rem;">
+            <img src="./img/gallery1.jpg" class="card-img-top" alt="gal1">
+            <div class="card-body">
+              <h5 class="card-title">Akshara</h5>
+              <p class="card-text">As Akshara, I'm passionate about photography; it's the language through which I express my deepest emotions and capture the beauty of the world.</p>
+              <center><a href="#" class="btn btn-primary card-btn" id="dish">Like</a></center>
+            </div><br>
+          </div>
+    </td>
+    <td>
+        <div class="card" style="width: 26rem;">
+            <img src="./img/gallery2.jpg" class="card-img-top" alt="gal2">
+            <div class="card-body">
+              <h5 class="card-title">Amara</h5>
+              <p class="card-text">As Amara, photography is my soul's mirror reflecting the world's essence in a single click, igniting my passion endlessly.</p><br><br>
+              <center><a href="#" class="btn btn-primary card-btn" id="dish">Like</a></center>
+            </div><br>
+          </div>
+    </td>
+    <td>
+        <div class="card" style="width: 26rem;">
+            <img src="./img/gallery3.jpg" class="card-img-top" alt="gal3">
+            <div class="card-body">
+              <h5 class="card-title">Dharani</h5>
+              <p class="card-text">As Dharani, photography is my passion, revealing the unseen stories of the world through the lens of my imagination.</p><br>
+              <a href="#" class="btn btn-primary card-btn" id="dish">Like</a>
+            </div>
+          </div>
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="card" style="width: 26rem;">
+            <img src="./img/gallery4.jpg" class="card-img-top" alt="gal4">
+            <div class="card-body">
+              <h5 class="card-title">Carlo</h5>
+              <p class="card-text">As Carlo, photography is my heartbeat, syncing with the rhythm of light and shadow, capturing the symphony of life in every frame.</p><br>
+              <a href="#" class="btn btn-primary card-btn" id="dish">Like</a>
+            </div>
+          </div>
+    </td>
+    <td>
+        <div class="card" style="width: 26rem;">
+            <img src="./img/gallery5.jpg" class="card-img-top" alt="gal5">
+            <div class="card-body">
+              <h5 class="card-title">Akash</h5>
+              <p class="card-text">As Akash, photography fuels my creativity, capturing moments that words alone cannot express, and etching memories that last a lifetime.</p><br>
+              <center><a href="#" class="btn btn-primary card-btn" id="dish">Like</a></center>
+            </div><br>
+          </div>
+    </td>
+    
+    <td>
+        <div class="card" style="width: 26rem;">
+            <img src="./img/gallery6.jpg" class="card-img-top" alt="gal6">
+            <div class="card-body">
+              <h5 class="card-title">Bhuvan</h5>
+              <p class="card-text">As Bhuvan, photography is my gateway to preserving fleeting moments, each click a testament to the beauty of life unfolding before me.</p>
+              <center><a href="#" class="btn btn-primary card-btn" id="dish">Like</a></center>
+            </div><br>
+          </div>
+    </td>
+</tr>
+</table>
+<br>
+<br>
+<div>
+    <center><div><a href="gal.html" class="jim">See More</a></div></center>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<!--Footer starts here -->
+<section>
+<table style="background-color:gray;width:100%;font-style:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+    <tr>
+        <td><div>
+            <h5 style="color:brown;text-decoration:underline">HEAD OFFICE</h5>
+            <p>A head office serves as the central administrative hub of an organization, overseeing strategic decision-making,
+                 coordination of operations, and management of resources across various branches or departments.</p>
+            <div class="contact-info">
+                <ul class="list-unstyled">
+                    <li><a href="#" class="jun"><i ></i> No.29,Kolar,Bangaluru.</a></li>
+                    <li><a href="#" class="jun"><i ></i>+91 9434343535</a></li>
+                    <li><a href="#" class="jun"><i ></i>Sanchari.Travels@example.com</a></li>
+                </ul>
+            </div>
+        </div></td>
+        <td><div>
+            <h5 style="color:brown;text-decoration:underline">More Links</h5>
+            <ul style="list-style:none;">
+                <li><a href="#" class="jun">About Us</a></li>
+                <li><a href="#" class="jun">Our Office</a></li>
+                <li><a href="#" class="jun">Location</a></li>
+                <li><a href="#" class="jun">Contact Us</a></li>
+                <li><a href="#" class="jun">Buy Gift Card</a></li>
+                <li><a href="#" class="jun">Get Free Guidance Call</a></li>
+                <li><a href="#" class="jun">Personal Bookings</a></li>
+            </ul>
+        </div></td>
+        <td><div>
+            <h5 style="color:brown;text-decoration:underline">Demo Links</h5>
+            <ul style="list-style:none;">
+                <li><a href="#" class="jun">About Us</a></li>
+                <li><a href="#" class="jun">Our Office</a></li>
+                <li><a href="#" class="jun">Location</a></li>
+                <li><a href="#" class="jun">Contact Us</a></li>
+                <li><a href="#" class="jun">Buy Gift Card</a></li>
+                <li><a href="#" class="jun">Get Free Guidance Call</a></li>
+                <li><a href="#" class="jun">Personal Bookings</a></li>
+            </ul>
+        </div></td>
+        <td><div>
+            <h5 style="color:brown;text-decoration:underline">Letter</h5>
+            <div>
+                <input type="email" class="emu" placeholder="enter your email here" style="border-color:black;">
+                <button type="submit" class="gold" style="background-color: blue;color:white">Subscribe</button>
+            </div>
+            <h5 style="color:brown;">Stay Connected</h5>
+            <ul class="social-network d-flex align-items-center p-0">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div></td>
+    </tr>
+</table>
+<div class="copyright-section">
+    <p>Copyright <a href="#"> @Nandu | Varshitha | Veena | Vedha </a> All Rights Reserved</p>
+</div>
+</section>
+<a href="#" class="scroll-btn">
+    <i class='fas fa-arrow-up' style="text-decoration:none;text-align:center;justify-content: space-evenly;height:100px;padding-bottom: 3px;font-size:30px;padding-top:9px"></i></a>
+<!-- Footer section exit -->
+<!-- Bootstrap 5 JS CDN Links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!--Bootstrap 5 JS-bundle CDN Links-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!--custom Js link-->
+<script src="./script.js"></script>
+</body>
+</html>
+<!--This JavaScript code is designed to create a simple counter effect on a web page. Let's break it down step by step:
+
+1. **DOMContentLoaded Event Listener**:
+   ```javascript
+   document.addEventListener("DOMContentLoaded", () => {
+       // Code goes here
+   });
+   ```
+   This code ensures that the JavaScript inside it runs only after the HTML content of the page has been fully loaded and parsed. This is to make sure that the JavaScript code doesn't try to manipulate elements that haven't yet been created.
+
+2. **Counter Function**:
+   ```javascript
+   function counter(id, start, end, duration) {
+       // Function body
+   }
+   ```
+   This is a function named `counter` that takes four parameters:
+   - `id`: The ID of the HTML element where the counter value will be displayed.
+   - `start`: The starting value of the counter.
+   - `end`: The ending value of the counter.
+   - `duration`: The duration (in milliseconds) over which the counter animation will occur.
+
+3. **Inside the Counter Function**:
+   ```javascript
+   let obj = document.getElementById(id),
+       current = start,
+       range = end - start,
+       increment = end > start ? 1 : -1,
+       step = Math.abs(Math.floor(duration / range)),
+       timer = setInterval(() => {
+           current += increment;
+           obj.textContent = current;
+           if (current == end) {
+               clearInterval(timer);
+           }
+       }, step);
+   ```
+   - `obj` is assigned the HTML element with the provided `id`. This is where the counter value will be displayed.
+   - `current` is set to the starting value of the counter.
+   - `range` is calculated as the difference between the `end` and `start` values.
+   - `increment` is determined based on whether the `end` value is greater than the `start` value.
+   - `step` is calculated as the duration divided by the range, representing the time interval between each step of the counter animation.
+   - `timer` is a setInterval function that updates the `current` value, updates the text content of the HTML element (`obj`), and checks if the counter has reached its end value. If it has, the interval is cleared using `clearInterval`.
+
+4. **Calling the Counter Function**:
+   ```javascript
+   counter("count1", 0, 1287, 3000);
+   counter("count2", 100, 5786, 2500);
+   counter("count3", 0, 1440, 3000);
+   counter("count4", 0, 7110, 3000);
+   ```
+   These lines call the `counter` function with different parameters for different elements on the page. Each call sets up a separate counter animation for a specific HTML element.
+
+In summary, this JavaScript code sets up counter animations for multiple elements on a web page. It starts counting from a specified starting value and animates the counter until it reaches a specified ending value over a specified duration.-->
